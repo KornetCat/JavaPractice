@@ -1,19 +1,17 @@
-package lab15;
+package lab15.Ex2;
 
 import java.awt.Container;
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.swing.*;
 
-public class TestFrame extends JFrame {
+public class CountriesMenu extends JFrame {
 
-    public TestFrame() {
+    public CountriesMenu() {
 
         super("Тестовое окно");
 
@@ -90,7 +88,7 @@ public class TestFrame extends JFrame {
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 JFrame.setDefaultLookAndFeelDecorated(true);
-                new TestFrame();
+                new CountriesMenu();
             }
         });
     }
