@@ -13,7 +13,7 @@ public class tester extends JFrame{
     public StudentList k = new StudentList();
     public tester(){
         super("Окно списка");
-        final TextField tf=new TextField();
+        final TextArea tf=new TextArea();
         tf.setBounds(50,20, 150,130);
         final TextField tf2=new TextField();
         tf2.setBounds(220, 20, 50, 20);
@@ -88,7 +88,7 @@ public class tester extends JFrame{
             public void actionPerformed(ActionEvent e){
                 try {
                     int l = Integer.parseInt(tf2.getText());
-                    k.remove(l + 1);
+                    k.remove(l - 1);
                     tf.setText("Объект успешно удалён");
                 }catch(Exception ex){
                     tf.setText("Ошибка");
