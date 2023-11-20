@@ -2,8 +2,11 @@ package lab15.Ex3;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MenuGUI extends JFrame {
+    public String copied = new String();
     public MenuGUI(){
         super("С меню");
         setPreferredSize(new Dimension(500, 500));
@@ -75,6 +78,21 @@ public class MenuGUI extends JFrame {
         cont.add(Second);
         cont.add(Text);
         setContentPane(cont);
+
+        ActionListener B = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                copied = Text.getText();
+            }
+        };
+        ActionListener C = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Text.append(copied);
+            }
+        };
+        Copy.addActionListener(B);
+        Vstav.addActionListener(C);
 
         pack();
         setLocationRelativeTo(null);

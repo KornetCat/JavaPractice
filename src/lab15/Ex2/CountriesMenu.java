@@ -70,7 +70,7 @@ public class CountriesMenu extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 JComboBox box = (JComboBox)e.getSource();
                 String item = (String)box.getSelectedItem();
-                ar1.append(dict_s.get(item));
+                ar1.setText(dict_s.get(item));
                 JOptionPane.showMessageDialog(label,  dict_f.get(item));
             }
         };
