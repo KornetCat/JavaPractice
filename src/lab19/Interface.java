@@ -22,7 +22,7 @@ public class Interface extends JFrame {
 
         Button b=new Button("Добавить нового студента");
         b.setBounds(50,150,60,30);
-        b.setSize(100,50);
+        b.setSize(150,50);
         b.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 try {
@@ -40,7 +40,7 @@ public class Interface extends JFrame {
 
         Button a=new Button("Вывести список студентов");
         a.setBounds(200,150,60,30);
-        a.setSize(100,50);
+        a.setSize(150,50);
         a.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 String names = "";
