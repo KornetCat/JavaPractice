@@ -54,10 +54,10 @@ public class DoublyLinkedList {
         DoublyLinkedList newList = new DoublyLinkedList();
 
         // Вставляем элементы в новый список с сохранением упорядоченности
-        newList.insertOrdered(3);
-        newList.insertOrdered(-8);
-        newList.insertOrdered(1);
-        newList.insertOrdered(2);
+        newList.insertOrdered(5);
+        newList.insertOrdered(-9);
+        newList.insertOrdered(-1);
+        newList.insertOrdered(7);
         newList.insertOrdered(5);
 
 
