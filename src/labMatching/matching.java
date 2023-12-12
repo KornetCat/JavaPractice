@@ -9,20 +9,20 @@ public class matching {
     public static boolean aaa(String exp) {
         String regex = "[\\[\\(\\{]";
         Pattern pattern = Pattern.compile(regex);
-        Stack<Char> k = new Stack<>();
+        Stack<String> k = new Stack<>();
         int r = 0;
         boolean j;
         for (int i = 0; i < exp.length(); i++) {
             char a = exp.charAt(i);
-            Char b = new Char(a);
+            String b = a+"";
             Matcher n = pattern.matcher(b.toString());
             if (n.find()) {
                 k.push(b);
             } else {
-                char o = k.pop().getA();
-                if (o == '(' & b.getA() == ')'
-                        | o == '[' & b.getA() == ']'
-                        | o == '{' & b.getA() == '}') {
+                char o = k.pop().charAt(0);
+                if (o == '(' & b.charAt(0) == ')'
+                        | o == '[' & b.charAt(0) == ']'
+                        | o == '{' & b.charAt(0) == '}') {
                     r++;
                 } else {
                     return false;
