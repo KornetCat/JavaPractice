@@ -5,22 +5,18 @@ import java.util.Scanner;
 
 public class Solution {
     public static void main(String main[]){
-        Scanner sc = new Scanner(System.in);
-        PrintWriter pw = new PrintWriter(System.out);
-
-        int num = sc.nextInt();
-        int[][] g = new int[num][num];
-        for(int i=0; i<num; i++){
-            for(int j=0; j<num; j++){
-                g[i][j] = sc.nextInt();
-            }
-        }
-        int sum = 0;
-        for(int i=0; i<num; i++){
-            for(int j=0; j<num; j++){
-                sum += g[i][j];
-            }
-        }
-        System.out.println(sum/2);
+        String[] vertex={"V1","V2","V3","V4","V5","V6"};
+        int[][] matrix=new int[vertex.length][vertex.length];
+        final int inf=Short.MAX_VALUE;
+        matrix[0]=new int[]{0,	16,	22,	30,	41,	59};
+        matrix[1]=new int[]{inf,0,	16,	22,	30,	41};
+        matrix[2]=new int[]{inf	,inf,0, 17, 23,31};
+        matrix[3]=new int[]{inf	,inf,inf,0,17,23};
+        matrix[4]=new int[]{inf	,inf,inf,inf,0,18};
+        matrix[5]=new int[]{inf,inf,inf,inf,inf,0};
+        Graph graph=new Graph(vertex,matrix);
+        VisitedVertex a = graph.dsj(0);
+        a.show();
+        System.out.println(a.dis[4]);
     }
 }
